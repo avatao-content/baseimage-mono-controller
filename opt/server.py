@@ -44,7 +44,7 @@ def solution_check():
     test = ['mono', 'nunit3-console.exe', '/home/user/App/Test/Test.csproj']
     try:
         copyfile('/home/user/solvable/Program.cs', '/home/user/App/App/Program.cs')
-        output = subprocess.check_output(build, stderr=subprocess.STDOUT)
+        output = str(subprocess.check_output(build, stderr=subprocess.STDOUT))
         if not "0 Error(s)" in output:
             return jsonify(solved=False, message="Error while building. \
 Make sure, your code doesn't have syntax errors and you have implemented the function!")
