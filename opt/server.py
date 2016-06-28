@@ -16,7 +16,9 @@ def test():
     test = ['mono', 'nunit3-console.exe', '/home/user/App/Test/Test.csproj']
     try:
         copyfile('/opt/Solution.cs', '/home/user/App/App/Program.cs')
-        subprocess.call(build)
+        output = subprocess.check_output(build, stderr=subprocess.STDOUT)
+        if not "0 Error(s)" in output:
+            abort(500, "Error while building")
     except Exception as e:
         abort(500, "Error while building")
     try:
@@ -42,7 +44,10 @@ def solution_check():
     test = ['mono', 'nunit3-console.exe', '/home/user/App/Test/Test.csproj']
     try:
         copyfile('/home/user/solvable/Program.cs', '/home/user/App/App/Program.cs')
-        subprocess.call(build)
+        output = subprocess.check_output(build, stderr=subprocess.STDOUT)
+        if not "0 Error(s)" in output:
+            return jsonify(solved=False, message="Error while building. \
+Make sure, your code doesn't have syntax errors and you have implemented the function!")
     except Exception as e:
         return jsonify(solved=False, message="Error while building. \
 Make sure, your code doesn't have syntax errors and you have implemented the function!")
