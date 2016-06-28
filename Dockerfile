@@ -6,10 +6,13 @@ USER root
 RUN apt-get update \
 	&& apt-get install -qy mono-devel
 
-COPY . /
+COPY ./ /
 
-RUN chown -R user:user /nunit
+RUN adduser --disabled-password --gecos ',,,' controller \
+	&& chown -R controller:controller /nunit /home/user/App \
+	&& cd /home/user/App \
+	&& find . -type f -exec chmod 700 {} +
 
-VOLUME ["/home/user", "/nunit/bin"]
+VOLUME ["/home/user/App", "/nunit/bin"]
 
-USER user
+USER controller

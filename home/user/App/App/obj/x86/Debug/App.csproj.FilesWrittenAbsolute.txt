@@ -1,0 +1,6 @@
+/home/user/workspace/MONO-PROJECTS/1/App/App/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/user/workspace/MONO-PROJECTS/1/App/App/bin/Debug/App.exe.mdb
+/home/user/workspace/MONO-PROJECTS/1/App/App/bin/Debug/App.exe
+/home/user/workspace/MONO-PROJECTS/1/App/App/obj/x86/Debug/App.exe
+/home/user/workspace/MONO-PROJECTS/1/App/App/obj/x86/Debug/App.exe.mdb
+/home/user/workspace/MONO-PROJECTS/1/App/App/bin/Debug/nunit.framework.dll

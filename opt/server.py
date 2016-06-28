@@ -41,6 +41,7 @@ def solution_check():
     build = ['xbuild', '/home/user/App/App.sln']
     test = ['mono', 'nunit3-console.exe', '/home/user/App/Test/Test.csproj']
     try:
+        copyfile('/home/user/solvable/Program.cs', '/home/user/App/App/Program.cs')
         subprocess.call(build)
     except Exception as e:
         return jsonify(solved=False, message="Error while building. \

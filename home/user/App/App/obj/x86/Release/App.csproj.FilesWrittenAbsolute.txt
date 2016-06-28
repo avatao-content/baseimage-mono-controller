@@ -1,0 +1,7 @@
+/home/user/workspace/MONO-PROJECTS/1/App/App/obj/x86/Release/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/user/workspace/MONO-PROJECTS/1/App/App/obj/x86/Release/App.Test.cs
+/home/user/workspace/MONO-PROJECTS/1/App/App/bin/Release/App.exe.mdb
+/home/user/workspace/MONO-PROJECTS/1/App/App/bin/Release/App.exe
+/home/user/workspace/MONO-PROJECTS/1/App/App/obj/x86/Release/App.exe
+/home/user/workspace/MONO-PROJECTS/1/App/App/obj/x86/Release/App.exe.mdb
+/home/user/workspace/MONO-PROJECTS/1/App/App/bin/Release/nunit.framework.dll
