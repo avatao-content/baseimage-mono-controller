@@ -46,11 +46,9 @@ def solution_check():
         copyfile('/home/user/solvable/Program.cs', '/home/user/App/App/Program.cs')
         output = str(subprocess.check_output(build, stderr=subprocess.STDOUT))
         if not "0 Error(s)" in output:
-            return jsonify(solved=False, message="Error while building. \
-Make sure, your code doesn't have syntax errors and you have implemented the function!")
+            return jsonify(solved=False, message="Error in output")
     except Exception as e:
-        return jsonify(solved=False, message="Error while building. \
-Make sure, your code doesn't have syntax errors and you have implemented the function!")
+        return jsonify(solved=False, message=str(e))
     try:
         subprocess.call(test)
         with open('/nunit/bin/TestResult.xml', 'r') as f:
