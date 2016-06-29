@@ -8,7 +8,7 @@ RUN apt-get update \
 
 COPY ./ /
 
-RUN adduser --disabled-password --gecos ',,,' controller \
+RUN adduser --disabled-password --gecos ',,,' --uid 2000 controller \
 	&& chown -R controller:controller /home/user/App /nunit \
 	&& chown root:root /home/user/App/App/App.csproj /home/user/App/Test/Test.csproj \
 	&& chown root:root /home/user/App/App.sln /home/user/App/Test/Test.cs \
