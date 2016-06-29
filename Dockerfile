@@ -11,6 +11,6 @@ COPY ./ /
 RUN adduser --disabled-password --gecos ',,,' controller \
 	&& chown -R controller:controller /nunit /home/user/App \
 	&& cd /home/user/App \
-	&& find . -type f -exec chmod 700 {} +
+	&& find . -type f -exec chmod 744 {} +
 
 VOLUME ["/nunit/bin"]
