@@ -16,7 +16,7 @@ def test():
     test = ['mono', 'nunit3-console.exe', '/home/user/App/Test/Test.csproj']
     try:
         copyfile('/opt/Solution.cs', '/home/user/App/App/Program.cs')
-        output = subprocess.check_output(build, stderr=subprocess.STDOUT)
+        output = str(subprocess.check_output(build, stderr=subprocess.STDOUT))
         if not "0 Error(s)" in output:
             abort(500, "Error while building")
     except Exception as e:
